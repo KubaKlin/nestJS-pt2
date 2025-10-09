@@ -23,7 +23,7 @@ export class ArticleService {
     return this.articles;
   }
 
-  getById(id: string){
+  getById(id: string) {
     const article = this.articles.find((article) => article.id === id);
 
     if (!article) {
