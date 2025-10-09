@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Param, ParseIntPipe } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param } from '@nestjs/common';
 import { ArticleService } from './article.service';
 import * as articleDto from './article.dto';
 
@@ -17,7 +17,7 @@ export class ArticleController {
   }
 
   @Get(':id')
-  getById(@Param('id', ParseIntPipe) id: string) {
+  getById(@Param('id') id: string) {
     return this.articleService.getById(id);
   }
 }
