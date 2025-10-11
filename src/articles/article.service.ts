@@ -16,7 +16,7 @@ export class ArticleService {
     };
 
     this.articles.push(newArticle);
-    return article;
+    return newArticle;
   }
 
   getAll() {
